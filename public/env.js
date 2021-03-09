@@ -1,3 +1,3 @@
 window.env = {
-  "API_URL": "https://api.test.com"
+  "API_URL": "https://triada-api.carbono.tech"
 };

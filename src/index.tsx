@@ -4,10 +4,13 @@ import 'antd/dist/antd.css';
 import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppProviders from 'AppProviders';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppProviders>
+      <App />
+    </AppProviders>
   </React.StrictMode>,
   document.getElementById('root')
 );
