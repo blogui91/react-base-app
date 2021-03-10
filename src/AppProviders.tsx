@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthProvider } from 'contexts/AuthContext';
-import ReactQueryProvider from 'providers/reactQueryProvider';
-import AppThemeProvider from 'providers/styledComponentsProvider';
+import ReactQueryProvider from 'providers/ReactQueryProvider';
+import AppThemeProvider from 'providers/StyledComponentsProvider';
 
 interface AppProvidersProps {}
 

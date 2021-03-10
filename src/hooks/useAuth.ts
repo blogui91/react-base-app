@@ -1,6 +1,15 @@
 import AuthContext from "contexts/AuthContext"
-import { useContext } from "react"
+import { useContext, useMemo } from "react"
 
-const useAuth = () => useContext<any>(AuthContext);
+const useAuth = () => {
+  const auth = useContext<any>(AuthContext);
+
+  const isAuthenticated = useMemo(() => !!auth?.user, [auth.user]);
+
+  return {
+    ...auth,
+    isAuthenticated,
+  }
+};
 
 export default useAuth;

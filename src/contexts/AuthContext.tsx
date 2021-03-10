@@ -13,7 +13,8 @@ export const AuthProvider: React.FC<any> = (props: any) => {
 
       return data.data;
     } catch (error) {
-      throw new Error('Hubo un error al obtener el usuario');
+      console.log('Hubo un error al obtener el usuario');
+      throw new Error('No se pudo obtener el usuario');
     }
   }, {
     retry: false,
@@ -48,10 +49,3 @@ export const AuthProvider: React.FC<any> = (props: any) => {
 };
 
 export default AuthContext;
-
-// the UserProvider in user-context.js is basically:
-// const UserProvider = props => (
-//   <UserContext.Provider value={useAuth().data.user} {...props} />
-// )
-// and the useUser hook is basically this:
-// const useUser = () => React.useContext(UserContext)
