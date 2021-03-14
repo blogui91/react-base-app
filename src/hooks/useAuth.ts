@@ -4,7 +4,7 @@ import { useContext, useMemo } from "react"
 const useAuth = () => {
   const auth = useContext<any>(AuthContext);
 
-  const isAuthenticated = useMemo(() => !!auth?.user, [auth.user]);
+  const isAuthenticated = useMemo(() => !!auth?.user, [auth?.user]);
 
   return {
     ...auth,
