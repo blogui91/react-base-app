@@ -32,7 +32,7 @@ export interface LoginResponse {
 const AuthResource = {
   getCurrentUser: (): Promise<any> => Http.get('api/profile'),
   login: (body: LoginFormFields): Promise<AxiosResponse<LoginResponse>> => Http.post('api/auth/login', body),
-  logout: (): Promise<any> => Http.get('api/logout'),
+  logout: (): Promise<AxiosResponse<null>> => Http.get('api/logout'),
 };
 
 export default AuthResource;
